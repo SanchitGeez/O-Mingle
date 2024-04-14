@@ -5,9 +5,234 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #000000;
+  color: aliceblue;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* ===========LOBBY CSS========== */
+.lobby-text{
+  height: 10%;
+  width: 30%;
+  background-color: #000000;
+  color: #FCFF69;
+  border-radius: 20px;
+  padding: 30px;
+  font-family:'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+
+/*=============ROOM CSS ===========*/
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.streams-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Add some space between the streams and the button */
+}
+
+.streams-container > div {
+  margin: 0 10px; /* Add space between the streams */
+}
+
+.next-button{
+  background-color: #FCFF69; 
+  color: #000000;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: larger;
+  margin: 0px;
+}
+
+.react-player1{
+  width: 500px;
+  height: 500px;
+  margin-left: 0px;
+}
+.react-player2{
+  width: 500px;
+  height: 500px;
+  margin-right: 0px;
+}
+.player-wrapper {
+  width: 470px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: #FCFF69;
+  border-radius: 0px;
+  border-width: 100px;
+  border: solid;
+  background-color: #FCFF69;
+}
+.background-figma{
+  position: fixed;
+  z-index: -100;
+}
+
+@media screen and (max-width: 600px) {
+  .streams-container {
+    flex-direction: column; /* Change to column layout for small screens */
+  }
+  .next-button{
+    margin: 0px;
+  }
+}
+
+.back{
+  position: fixed;
+  display: block;
+  z-index: -100;
+  opacity: 50%;
+}
+.green1{
+  height: 250px;
+  width: 100px;
+  margin-left: -10px;
+  border-radius: 50px 50px 0 50px;
+  background-color: #04CA95;
+}
+.green2{
+  height: 250px;
+  width: 100px;
+  margin-left: 10px;
+  border-radius: 50px 50px 0 50px;
+  background-color: #04CA95;
+}
+.green3{
+  height: 100px;
+  width: 250px;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-radius: 50px 50px 50px 50px;
+  background-color: #04CA95;
+}
+.green4{
+  height: 100px;
+  width: 100px;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-radius: 00px 50px 50px 50px;
+  background-color: #04CA95;
+}
+.purple-element{
+  transform-style: preserve-3d;
+  transform: rotateZ(270deg);
+  
+}
+.purple1{
+  height: 250px;
+  width: 100px;
+  margin-left: -10px;
+  border-radius: 50px 50px 0 50px;
+  background-color: #936BFF;
+}
+.purple2{
+  height: 250px;
+  width: 100px;
+  margin-left: 10px;
+  border-radius: 50px 50px 0 50px;
+  background-color: #936BFF;
+}
+.purple3{
+  height: 100px;
+  width: 250px;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-radius: 50px 50px 50px 50px;
+  background-color: #936BFF;
+}
+.purple4{
+  height: 100px;
+  width: 100px;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-radius: 50px 50px 0px 50px;
+  background-color: #936BFF;
+}
+
+.red-element{
+  transform-style: preserve-3d;
+  transform: rotateZ(270deg);
+  
+}
+.red1{
+  height: 250px;
+  width: 100px;
+  margin-left: -10px;
+  border-radius: 50px 50px 0 50px;
+  background-color: #F84B5F;
+}
+.red2{
+  height: 250px;
+  width: 100px;
+  margin-left: 10px;
+  border-radius: 50px 50px 0 50px;
+  background-color: #F84B5F;
+}
+.red3{
+  height: 250px;
+  width: 250px;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-radius: 50px 0px 50px 50px;
+  background-color: #F84B5F;
+}
+.red4{
+  height: 100px;
+  width: 100px;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-radius: 00px 50px 50px 50px;
+  background-color: #F84B5F;
+}
+
+.grey-element{
+  transform-style: preserve-3d;
+  transform: rotateZ(270deg);
+  
+}
+.grey1{
+  height: 250px;
+  width: 100px;
+  margin-left: -10px;
+  border-radius: 50px 0px 0 50px;
+  background-color: #2E3138;
+}
+.grey2{
+  height: 250px;
+  width: 100px;
+  margin-left: 10px;
+  border-radius: 50px 50px 0 0px;
+  background-color: #2E3138;
+}
+.grey3{
+  height: 250px;
+  width: 100px;
+  margin-left: 10px;
+  border-radius: 0px 50px 0 50px;
+  background-color: #2E3138;
+}
+.grey4{
+  height: 250px;
+  width: 100px;
+  margin-left: 10px;
+  border-radius: 50px 50px 0 50px;
+  background-color: #2E3138;
 }

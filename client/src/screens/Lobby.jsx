@@ -48,9 +48,12 @@ const LobbyScreen = () => {
   }, [socket, handleJoinRoom,handleSubmitForm]);
 
   return (
-    <div>
-      <h1>Looking for a User...</h1>
+    <div style={{display:"flex", alignItems:"center",justifyContent:"center",width:"100vw",height:"100vh"}}>
+      <div className="lobby-text">
+          <h1>Looking for a User...</h1>
+      </div>
     </div>
+    
   );
 };
 

@@ -188,39 +188,110 @@ const RoomPage = () => {
   ]);
 
   return (
-    <div>
-      <h1>Room Page</h1>
-      <h4>{remoteSocketId ? "Connected " : "No one in room"}</h4>
-      {/* {myStream && <button onClick={sendStreams}>Send Stream</button>} */}
-      {/* {remoteSocketId && <button onClick={handleCallUser}>CALL</button>} */}
-      {remoteStream && <button onClick={handleNext}>NEXT</button>}
-
-      {myStream && (
-        <>
-          <h1>My Stream</h1>
-          <ReactPlayer
-            playing
-            muted
-            height="100px"
-            width="200px"
-            url={myStream}
-          />
-        </>
-      )}
-      {remoteStream && (
-        <>
-          <h1>Remote Stream</h1>
-          <ReactPlayer
-            playing
-            muted
-            height="100px"
-            width="200px"
-            url={remoteStream}
-          />
-        </>
-      )}
+    <>
+<div className="back">
+    <div className="green-element" style={{display:"flex"}}>
+    <div className="green1">
+      <p style={{opacity:"0%"}}>.</p>
     </div>
-  );
-};
+    <div className="green2">
+      <p style={{opacity:"0%"}}>.</p>
+    </div>
+    <div style={{display:"flex",justifyContent:"end",flexDirection:"column"}}>
+    <div className="green4">
+      <p style={{opacity:"0%"}}>.</p>
+    </div>
+    <div className="green3">
+      <p style={{opacity:"0%"}}>.</p>
+    </div>
+    </div>
+    
+    </div>
+    <div className="purple-element" style={{display:"flex",position:"fixed",bottom:"0px",right:"-100px"}}>
+    <div className="purple1">
+      <p style={{opacity:"0%"}}>.</p>
+    </div>
+    <div className="purple2">
+      <p style={{opacity:"0%"}}>.</p>
+    </div>
+    <div style={{display:"flex",justifyContent:"end",flexDirection:"column"}}>
+    <div className="purple4">
+      <p style={{opacity:"0%"}}>.</p>
+    </div>
+    <div className="purple3">
+      <p style={{opacity:"0%"}}>.</p>
+    </div>
+    </div>
+    
+    </div>
 
+    <div className="red-element" style={{display:"flex",position:"fixed",bottom:"0px",left:"-120px"}}>
+    <div className="red1">
+      <p style={{opacity:"0%"}}>.</p>
+    </div>
+    <div className="red2">
+      <p style={{opacity:"0%"}}>.</p>
+    </div>
+    <div style={{display:"flex",justifyContent:"end",flexDirection:"column"}}>
+
+    <div className="red3">
+      <p style={{opacity:"0%"}}>.</p>
+    </div>
+    </div>
+    
+    </div>
+
+
+    <div className="grey-element" style={{display:"flex",position:"fixed",top:"0px",right:"-50px"}}>
+    <div className="grey1">
+      <p style={{opacity:"0%"}}>.</p>
+    </div>
+    <div className="grey2">
+      <p style={{opacity:"0%"}}>.</p>
+    </div>
+    <div className="grey3">
+      <p style={{opacity:"0%"}}>.</p>
+    </div>
+    
+    </div>
+    </div>
+
+    <div className="container">
+      <div className="streams-container">
+        {myStream && (
+          <div className="player-wrapper">
+            <ReactPlayer
+              className="react-player1"
+              playing
+              muted
+              url={myStream}
+            />
+          </div>
+        )}
+        {remoteStream && (
+          <button 
+            onClick={handleNext}
+            className="next-button" 
+          >
+            NEXT
+          </button>
+        )}
+        {remoteStream && (
+          <div className="player-wrapper">
+            <ReactPlayer
+              className="react-player2"
+              playing
+              muted
+              url={remoteStream}
+            />
+          </div>
+        )}
+      </div>
+    </div>
+    </>
+    
+  );
+  
+  
+}
 export default RoomPage;
